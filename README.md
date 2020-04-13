@@ -1,2 +1,16 @@
-# feedbackUI
-用户反馈分析工具前端
+# 余洋
+
+> A Vue.js project
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build （编译用这个）
+```
