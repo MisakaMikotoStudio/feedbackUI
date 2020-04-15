@@ -65,6 +65,13 @@
           </template>
         </el-table-column>
         <el-table-column
+          label="状态"
+          width="100">
+          <template slot-scope="scope">
+            <div v-html="scope.row.status"></div>
+          </template>
+        </el-table-column>
+        <el-table-column
           label="标签"
           min-width="120">
           <template slot-scope="scope">
@@ -83,13 +90,6 @@
           min-width="200">
           <template slot-scope="scope">
             <div v-html="scope.row.solution"></div>
-          </template>
-        </el-table-column>
-        <el-table-column
-          label="状态"
-          width="100">
-          <template slot-scope="scope">
-            <div v-html="scope.row.status"></div>
           </template>
         </el-table-column>
         <el-table-column
