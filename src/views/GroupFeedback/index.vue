@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="tableData">
-      <el-table ref="ContentTable" row-key="id" :data="tableData" class="ContentTable" border default-expand-all @row-click="rowClick" @sort-change="sortChange">
+      <el-table ref="ContentTable" row-key="id" :data="tableData" class="ContentTable" border default-expand-all @row-dblclick="rowClick" @sort-change="sortChange">
         <el-table-column
           prop="id"
           label="ID"
@@ -127,6 +127,7 @@
 
       <p class="dialog-title margin">标签</p>
       <el-select v-model="addForm.labels" multiple filterable class="input-focus" placeholder="请选择">
+        <li slot="empty" @click="addTags('addForm')" class="el-select-dropdown__item" style="text-align: center;border-bottom: 1px solid #f0f0f0;padding-bottom: 40px;"><span>添加标签</span></li>
         <li @click="addTags('addForm')" class="el-select-dropdown__item" style="text-align: center;border-bottom: 1px solid #f0f0f0;padding-bottom: 40px;"><span>添加标签</span></li>
         <el-option
           v-for="item in LabelsOptions"
